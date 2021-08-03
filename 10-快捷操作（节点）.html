@@ -1,0 +1,26 @@
+<ul>
+    <li>锄禾日当午，</li>
+    <li>汗滴禾下土。</li>
+    <li>谁知盘中餐，</li>
+    <li>粒粒皆辛苦。</li>
+</ul>
+
+<script src="./jq.js"></script>
+<script>
+// 前追加兄弟  $().before(直接写标签) 	 
+// 后追加兄弟  $().after(直接写标签) 	 
+// 前追加子	   $().prepend(直接写标签)
+// 后追加子	   $().append(直接写标签)
+// 删除		  $().remove()
+
+// 需求1：ul>li嵌套
+// 需求2：锄禾日当午  前面  <li>111</li>
+$('ul li:first').before('<li>111</li>')
+// 需求3：汗滴禾下土  后面  <li>222</li>
+// $('ul li:eq(1)').after('<li>222</li>')
+$('ul li:eq(2)').after('<li>222</li>')
+// 需求4：删除（谁知盘中餐）
+$('ul li:eq(4)').remove()
+// 需求5：ul最后加一个子    <li>333</li>
+$('ul').append('<li>333</li>')
+</script>
